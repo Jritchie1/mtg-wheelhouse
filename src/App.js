@@ -1,25 +1,42 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Button from '@mui/material/Button';
+import ButtonGroup from "@mui/material/ButtonGroup";
+
+const collectionServices = [
+    <Button>Card Search</Button>,
+    <Button>Collection Manager</Button>,
+    <Button>Wish List</Button>
+];
+
+const playerServices = [
+    <Button>Game Tracker</Button>,
+    <Button>Deck Lists</Button>,
+    <Button>Tournament Helper</Button>
+];
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="App">
+            <header className="App-header">
+                <ButtonGroup
+                    orientation="vertical"
+                    aria-label="vertical contained button group"
+                    variant="contained"
+                >
+                    {collectionServices}
+                </ButtonGroup>
+                <ButtonGroup
+                    orientation="vertical"
+                    aria-label="vertical contained button group"
+                    variant="contained"
+                >
+                    {playerServices}
+                </ButtonGroup>
+            </header>
+        </div>
+    );
 }
 
 export default App;
